@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDNA - Performance Sportswear</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #333333 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 50px 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        h1 {
+            font-size: 4em;
+            font-weight: 900;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #fff, #ccc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            font-weight: 300;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        p {
+            font-size: 1.3em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .benefits {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: left;
+            display: inline-block;
+        }
+        
+        .benefits ul {
+            list-style: none;
+        }
+        
+        .benefits li {
+            font-size: 1.2em;
+            margin: 15px 0;
+            padding-left: 10px;
+        }
+        
+        .form-container {
+            margin: 30px 0;
+        }
+        
+        input {
+            padding: 18px 25px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255,255,255,0.9);
+            margin-bottom: 15px;
+        }
+        
+        button {
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            background: #ff4444;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        button:hover {
+            background: #ff6666;
+            transform: translateY(-2px);
+        }
+        
+        .notice {
+            margin-top: 20px;
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>EDNA</h1>
+        <h2>Performance Sportswear</h2>
+        
+        <p>Revolutionäre Sportbekleidung für Läufer, Radfahrer und Fitness-Athleten. Kommt bald.</p>
+        
+        <div class="benefits">
+            <ul>
+                <li>✅ Performance-optimiertes Design</li>
+                <li>✅ Atmungsaktiv & schnell trocknend</li>
+                <li>✅ Exklusive Launch-Rabatte</li>
+                <li>✅ Als Erster Bescheid wissen</li>
+            </ul>
+        </div>
+
+        <div class="form-container">
+            <form action="https://formspree.io/f/your-email" method="POST">
+                <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+                <button type="submit">Eintragen & 15% Rabatt sichern</button>
+            </form>
+        </div>
+        
+        <p class="notice">Trag dich ein und wir benachrichtigen dich sofort beim Launch! Kein Spam.</p>
+    </div>
+</body>
+</html>
