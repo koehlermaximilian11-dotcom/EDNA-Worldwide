@@ -12,95 +12,116 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #000000 0%, #333333 100%);
-            color: white;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
+            line-height: 1.6;
         }
         
-        .container {
-            max-width: 600px;
+        .hero {
+            max-width: 1200px;
             width: 100%;
-            text-align: center;
-            background: rgba(255,255,255,0.1);
-            padding: 50px 30px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .logo {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #ff4444;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
         }
         
         h1 {
-            font-size: 4em;
-            font-weight: 900;
-            margin-bottom: 10px;
-            background: linear-gradient(45deg, #fff, #ccc);
+            font-size: 3.5em;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #fff, #aaa);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         
-        h2 {
-            font-size: 1.8em;
+        .subtitle {
+            font-size: 1.4em;
+            color: #ccc;
+            margin-bottom: 40px;
             font-weight: 300;
-            margin-bottom: 30px;
-            opacity: 0.9;
         }
         
-        p {
-            font-size: 1.3em;
-            line-height: 1.6;
-            margin-bottom: 30px;
+        .features {
+            display: grid;
+            gap: 15px;
+            margin: 40px 0;
         }
         
-        .benefits {
-            background: rgba(255,255,255,0.1);
-            padding: 25px;
-            border-radius: 15px;
-            margin: 30px 0;
-            text-align: left;
-            display: inline-block;
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1em;
         }
         
-        .benefits ul {
-            list-style: none;
-        }
-        
-        .benefits li {
-            font-size: 1.2em;
-            margin: 15px 0;
-            padding-left: 10px;
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            background: #ff4444;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
         }
         
         .form-container {
-            margin: 30px 0;
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .form-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
         }
         
         input {
+            flex: 1;
             padding: 18px 25px;
-            border: none;
-            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            background: rgba(255,255,255,0.05);
+            color: white;
             font-size: 16px;
-            width: 100%;
-            max-width: 400px;
-            background: rgba(255,255,255,0.9);
-            margin-bottom: 15px;
+        }
+        
+        input::placeholder {
+            color: #999;
         }
         
         button {
             padding: 18px 40px;
             border: none;
-            border-radius: 50px;
-            font-size: 18px;
+            border-radius: 12px;
             background: #ff4444;
             color: white;
+            font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
-            font-weight: bold;
             transition: all 0.3s;
-            width: 100%;
-            max-width: 400px;
         }
         
         button:hover {
@@ -108,37 +129,73 @@
             transform: translateY(-2px);
         }
         
-        .notice {
-            margin-top: 20px;
+        .guarantee {
+            text-align: center;
             font-size: 0.9em;
-            opacity: 0.7;
+            color: #999;
+            margin-top: 20px;
+        }
+        
+        .countdown {
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .form-group {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2.5em;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>EDNA</h1>
-        <h2>Performance Sportswear</h2>
-        
-        <p>Revolutionäre Sportbekleidung für Läufer, Radfahrer und Fitness-Athleten. Kommt bald.</p>
-        
-        <div class="benefits">
-            <ul>
-                <li>✅ Performance-optimiertes Design</li>
-                <li>✅ Atmungsaktiv & schnell trocknend</li>
-                <li>✅ Exklusive Launch-Rabatte</li>
-                <li>✅ Als Erster Bescheid wissen</li>
-            </ul>
+    <div class="hero">
+        <div class="content">
+            <div class="logo">EDNA</div>
+            <h1>Performance<br>Sportswear</h1>
+            <p class="subtitle">Revolutionäre Bekleidung für Läufer, Radfahrer und Fitness-Athleten. Kommt Frühjahr 2025.</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">✓</div>
+                    <span>Performance-optimierte Materialien</span>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✓</div>
+                    <span>Atmungsaktiv & schnell trocknend</span>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✓</div>
+                    <span>Design mit Fokus auf Komfort</span>
+                </div>
+            </div>
         </div>
-
+        
         <div class="form-container">
+            <h3 style="margin-bottom: 20px; font-size: 1.3em;">Sichere dir 15% Launch-Rabatt</h3>
             <form action="https://formspree.io/f/your-email" method="POST">
-                <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
-                <button type="submit">Eintragen & 15% Rabatt sichern</button>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+                    <button type="submit">Eintragen</button>
+                </div>
             </form>
+            <div class="countdown">
+                <strong>Nur für die ersten 100 Anmeldungen</strong>
+            </div>
+            <p class="guarantee">Kein Spam. Jederzeit abbestellbar.</p>
         </div>
-        
-        <p class="notice">Trag dich ein und wir benachrichtigen dich sofort beim Launch! Kein Spam.</p>
     </div>
 </body>
 </html>
